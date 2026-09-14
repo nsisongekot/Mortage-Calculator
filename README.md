@@ -31,5 +31,5 @@ Calculate mortgage repayments
 Display dynamic content on the page
 Reset forms using JavaScript
 
-#Author
+# Author
 Nsisong Ekot
