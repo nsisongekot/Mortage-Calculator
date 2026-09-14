@@ -30,3 +30,6 @@ Use conditional statements (if...else)
 Calculate mortgage repayments
 Display dynamic content on the page
 Reset forms using JavaScript
+
+#Author
+Nsisong Ekot
