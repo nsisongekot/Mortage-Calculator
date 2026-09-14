@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Mortgage repayment calculator</title>
+
+    <style>
+      .attribution {
+        font-size: 0.6875rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    
+
+    <!-- ========================= -->
+    <!-- MAIN APPLICATION -->
+    <!-- ========================= -->
+
+    <main>
+
+        <!-- Left Panel -->
+
+        <section>
+
+          <div class="title-row">
+
+           <h1>Mortgage Calculator</h1>
+
+             <a href="#" id="clearAll">
+
+               Clear All
+
+            </a>
+
+          </div>
+
+          <form id="mortgageForm">
+
+           <!-- ========================= -->
+           <!-- Mortgage Amount -->
+           <!-- ========================= -->
+
+            <div>
+
+              <label for="mortgageAmount">
+
+                   Mortgage Amount
+
+              </label>
+
+              <div class="input-group">
+
+                <span>
+
+                 £
+
+                </span>
+
+                <input
+                  type="number"
+                  id="mortgageAmount"
+                  name="mortgageAmount"
+                  placeholder="300000">
+
+               </div>
+                 <p class="error-message" id="amountError">
+                     This field is required
+                  </p>
+            </div>
+            <!-- ========================= -->
+            <!-- Mortgage Term -->
+            <!-- ========================= -->
+
+          <div class="input-row">
+            <div>
+
+               <label for="mortgageTerm">
+
+                 Mortgage Term
+
+              </label>
+             
+              <div class="input-group">
+              
+               <input
+               type="number"
+               id="mortgageTerm"
+               name="mortgageTerm"
+               placeholder="25"
+               >
+               
+               <span>years</span>
+
+              </div>             
+               
+              <p class="error-message" id="termError">
+                     This field is required
+              </p>
+
+            </div>
+            <!-- ========================= -->
+            <!-- Interest Rate -->
+            <!-- ========================= -->
+
+            <div>
+
+              <label for="interestRate">
+
+                Interest Rate
+
+              </label>
+              
+              <div class="input-group">
+
+               <input
+               type="number"
+               id="interestRate"
+               name="interestRate"
+               placeholder="5.25"
+               >
+               <span>%</span>
+
+              </div>
+
+              <p class="error-message" id="rateError">
+                     This field is required
+              </p>
+
+            </div>
+          </div>
+        
+            <!-- ========================= -->
+            <!-- Mortgage Type -->
+            <!-- ========================= -->
+
+            
+
+              <legend>
+
+                Mortgage Type
+
+              </legend>
+
+              <div>
+                  <label class="radio-option">
+                   <input
+                   type="radio"
+                   id="repayment"
+                   name="mortgageType"
+                   value="repayment"
+                   required>                  
+
+                   <span>Repayment</span>
+
+                  </label>
+
+              </div>
+
+              <div>
+                 
+                  <label class="radio-option">
+                    <input
+                     type="radio"
+                     id="interestOnly"
+                     name="mortgageType"
+                     value="interestOnly">
+
+                     <span>Interest Only</span>
+
+                  </label>
+
+              </div>
+
+           
+            <!-- ========================= -->
+            <!-- Calculate Button -->
+            <!-- ========================= -->
+
+            <button type="submit">
+              
+              <img
+               src="../assets/images/icon-calculator.svg"
+               alt="">
+              Calculate Repayments
+
+            </button>
+          </form>
+        </section>
+
+        <!-- Right Panel -->
+         
+<!-- ========================= -->
+<!-- RESULTS SECTION -->
+<!-- ========================= -->
+
+<section class="results">
+
+    <!-- Empty Result -->
+    <div class="empty-result" id="emptyResult">
+
+        <img src="assets/images/illustration-empty.svg"
+             alt="Empty illustration">
+
+        <h2>Results shown here</h2>
+
+        <p>
+            Complete the form and click "Calculate Repayments"
+            to see what your monthly repayments would be.
+        </p>
+
+    </div>
+
+
+    <!-- Completed Result -->
+    <div class="completed-result" id="completedResult">
+
+        <h2>Your results</h2>
+
+        <p>
+            Your results are shown below based on the information
+            you provided. To adjust the results, edit the form
+            and click "Calculate Repayments" again.
+        </p>
+
+        <div class="result-box">
+
+            <h3>Your monthly repayments</h3>
+
+            <h1 id="monthlyPayment">
+                £0.00
+            </h1>
+
+            <hr>
+
+            <h4>Total you'll repay over the term</h4>
+
+            <p id="totalRepayment">
+                £0.00
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+    </main>
+
+    <script src="./js/script.js"></script>
+
+  </body>
+  
+</html>
